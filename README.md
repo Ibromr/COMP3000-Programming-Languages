@@ -1,10 +1,10 @@
-##COMP3000: A Programming Language for Water Flow Modelling
+## COMP3000: A Programming Language for Water Flow Modelling
 This repository documents my project for the third-year unit, COMP3000: EPIC Programming Languages. Our course uses Robert Nystrom's book, "Crafting Interpreters," as a guide, teaching us the fundamentals of designing and implementing our own programming language from scratch.
 
-##Project Goal
+## Project Goal
 This semester, our cohort is creating a custom-built programming language to model water flow in river systems. The project tackles real-world scenarios, such as the Googong Dam, by simulating water levels based on rainfall data. The language we are developing aims to provide a more powerful, flexible, and understandable solution for waterflow management science compared to existing simulation software.
 
-##The Unit's Approach
+## The Unit's Approach
 COMP3000 integrates computer science and software engineering principles through the EPIC (Experience, Purpose, Impact, Collaboration) learning framework. We work in teams throughout the semester, applying core concepts to collaboratively solve this significant, real-world problem.
 
 
