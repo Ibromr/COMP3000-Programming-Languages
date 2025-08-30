@@ -1,0 +1,216 @@
+Macquarie University
+Handbook | Library | Campus Map | Macquarie Contacts
+Macquarie Home
+Students
+Staff
+  
+Staff iTeach login
+COMP3000 – Programming Languages
+2025 – Session 2, In person-scheduled-weekday, North Ryde 
+COMP3000
+Programming Languages
+Session 2, In person-scheduled-weekday, North Ryde
+
+ General Information
+ Learning Outcomes
+ General Assessment Information
+ Assessment Tasks
+ Delivery and Resources
+ Policies and Procedures
+ Changes from Previous Offering
+ Changes since First Published
+General Information Download as PDF
+Unit convenor and teaching staff	
+Matthew Roberts
+matthew.roberts@mq.edu.au
+Damian Jurd
+damian.jurd@mq.edu.au
+Credit points	
+10
+Prerequisites	
+130cp at 1000 level or above including COMP2010 or COMP2000
+Corequisites	
+Co-badged status	
+Unit description	
+Formal languages play a central role in modern software development. Programming languages such as Java and C++ allow developers to express their algorithms and data structures. Compilers and interpreters transform programs into running software. This unit studies software languages by looking at how they are used in software development. Students will study how to formally understand the syntax, semantics and translation of software languages. Practical exercises involve writing software language processors of various kinds such as simple compilers or data transformation tools.
+
+Important Academic Dates
+Information about important academic dates including deadlines for withdrawing from units are available at https://www.mq.edu.au/study/calendar-of-dates
+
+Learning Outcomes
+On successful completion of this unit, you will be able to:
+
+ULO1: evaluate the role that languages play in software development and describe a spectrum of software languages that are in current use
+ULO2: express properties of software languages using formal notations
+ULO3: translate formal notations of software language properties into implementations of language processors
+ULO4: defend the correct operation of a language processor by construction and use of appropriate test cases
+General Assessment Information
+Release
+Specifications for the assignments will be released no later than
+
+Assignment 1 - 8th September.
+Assignment 2 - 24th October.
+Requirements to Pass this Unit
+To pass this unit you must achieve a total mark equal to or greater than 50%. There are no hurdle requirements for the unit.
+
+LATE ASSESSMENT SUBMISSION PENALTY
+
+Unless a Special Consideration request has been submitted and approved, a 5% penalty (of the total possible mark of the task) will be applied for each day a written report or presentation assessment is not submitted, up until the 7th day (including weekends). After the 7th day, a grade of ‘0’ will be awarded even if the assessment is submitted. The submission time for all uploaded assessments is 11:55 pm. A 1-hour grace period will be provided to students who experience a technical concern. For any late submission of time-sensitive tasks, such as scheduled tests/exams, performance assessments/presentations, and/or scheduled practical assessments/labs, please apply for Special Consideration. For example, if the assignment is worth 8 marks (of the entire unit) and your submission is late by 19 hours (or 23 hours 59 minutes 59 seconds), 0.4 marks (5% of 8 marks) will be deducted. If your submission is late by 24 hours (or 47 hours 59 minutes 59 seconds), 0.8 marks (10% of 8 marks) will be deducted, and so on.
+
+ASSESSMENTS WHERE LATE SUBMISSIONS WILL BE ACCEPTED
+
+Assignment 1: YES, Standard Late Penalty applies 
+Assignment 2: YES, Standard Late Penalty applies 
+Exam: NO
+Special Consideration
+The Special Consideration Policy aims to support students who have been impacted by short-term circumstances or events that are serious, unavoidable and significantly disruptive, and which may affect their performance in assessment.
+
+If you experience circumstances or events that affect your ability to complete either of the assignments in this unit on time, please inform the convenor and submit a Special Consideration request through ask.mq.edu.au.
+
+Assessment Tasks
+Name	Weighting	Hurdle	Due
+Assignment One	25%	No	28/09/2025
+Assignment Two	25%	No	09/11/2025
+Examination	50%	No	During the formal exam period
+Assignment One
+Assessment Type 1: Programming Task
+Indicative Time on Task 2: 25 hours
+Due: 28/09/2025
+Weighting: 25%
+
+ 
+
+A programming task to demonstrate practical mastery of the first half of the course
+
+ 
+
+
+On successful completion you will be able to:
+express properties of software languages using formal notations
+translate formal notations of software language properties into implementations of language processors
+defend the correct operation of a language processor by construction and use of appropriate test cases
+Assignment Two
+Assessment Type 1: Programming Task
+Indicative Time on Task 2: 25 hours
+Due: 09/11/2025
+Weighting: 25%
+
+ 
+
+A programming task to demonstrate mastery of the second half of the course.
+
+ 
+
+
+On successful completion you will be able to:
+express properties of software languages using formal notations
+translate formal notations of software language properties into implementations of language processors
+defend the correct operation of a language processor by construction and use of appropriate test cases
+Examination
+Assessment Type 1: Examination
+Indicative Time on Task 2: 25 hours
+Due: During the formal exam period
+Weighting: 50%
+
+ 
+
+An exam to test both theoretical and practical mastery of all the course material
+
+ 
+
+
+On successful completion you will be able to:
+evaluate the role that languages play in software development and describe a spectrum of software languages that are in current use
+express properties of software languages using formal notations
+translate formal notations of software language properties into implementations of language processors
+defend the correct operation of a language processor by construction and use of appropriate test cases
+1 If you need help with your assignment, please contact:
+
+the academic teaching staff in your unit for guidance in understanding or completing this type of assessment
+the Writing Centre for academic skills support.
+2 Indicative time-on-task is an estimate of the time required for completion of the assessment task and is subject to individual variation
+
+Delivery and Resources
+COMP3000 is taught via weekly 2-hour classes.  There are no separate face-to-face lectures.
+Each week you should participate in your scheduled two hour practical. For details of scheduled classes consult the timetables webpage.
+
+Week1
+Note that classes commence in week 1. The week-by-week details of the practical classes will be available from iLearn.
+
+Students are expected to do significant preparatory work, readings and exercises before attending classes.
+
+Textbook and Reading Materials
+The required text for the unit is Crafting Interpreters by Robert Nystrom
+
+Each week a set of notes, a Rapid Aptitude Test (RAT), an application exercise, and self-study material will be provided in a pdf file.  This material will include a set of activities (including the RAT) which are to be done before class.
+
+Lecture videos covering all topics will be made available on echo360 for students to review at their convenience.
+
+Communication Methods in COMP3000
+We will communicate with you via your university email and through announcements on iLearn. Queries to convenors can either be placed on the iLearn discussion board or sent to the unit convenor via the contact email on iLearn.
+
+Policies and Procedures
+Macquarie University policies and procedures are accessible from Policy Central (https://policies.mq.edu.au). Students should be aware of the following policies in particular with regard to Learning and Teaching:
+
+Academic Appeals Policy
+Academic Integrity Policy
+Academic Progression Policy
+Assessment Policy
+Fitness to Practice Procedure
+Assessment Procedure
+Complaints Resolution Procedure for Students and Members of the Public
+Special Consideration Policy
+Students seeking more policy resources can visit Student Policies (https://students.mq.edu.au/support/study/policies). It is your one-stop-shop for the key policies you need to know about throughout your undergraduate student journey.
+
+To find other policies relating to Teaching and Learning, visit Policy Central (https://policies.mq.edu.au) and use the search tool.
+
+Student Code of Conduct
+Macquarie University students have a responsibility to be familiar with the Student Code of Conduct: https://students.mq.edu.au/admin/other-resources/student-conduct
+
+Results
+Results published on platform other than eStudent, (eg. iLearn, Coursera etc.) or released directly by your Unit Convenor, are not confirmed as they are subject to final approval by the University. Once approved, final results will be sent to your student email address and will be made available in eStudent. For more information visit connect.mq.edu.au or if you are a Global MBA student contact globalmba.support@mq.edu.au
+
+Academic Integrity
+At Macquarie, we believe academic integrity – honesty, respect, trust, responsibility, fairness and courage – is at the core of learning, teaching and research. We recognise that meeting the expectations required to complete your assessments can be challenging. So, we offer you a range of resources and services to help you reach your potential, including free online writing and maths support, academic skills development and wellbeing consultations.
+
+Student Support
+Macquarie University provides a range of support services for students. For details, visit http://students.mq.edu.au/support/
+
+Academic Success
+Academic Success provides resources to develop your English language proficiency, academic writing, and communication skills.
+
+Workshops
+Chat with a WriteWISE peer writing leader
+Access StudyWISE
+Upload an assignment to Studiosity
+Complete the Academic Integrity Module
+The Library provides online and face to face support to help you find and use relevant information resources. 
+
+Subject and Research Guides
+Ask a Librarian
+Student Services and Support
+Macquarie University offers a range of Student Support Services including:
+
+IT Support
+Accessibility and disability support with study
+Mental health support
+Safety support to respond to bullying, harassment, sexual harassment and sexual assault
+Social support including information about finances, tenancy and legal issues
+Student Advocacy provides independent advice on MQ policies, procedures, and processes
+Student Enquiries
+Got a question? Ask us via the Service Connect Portal, or contact Service Connect.
+
+IT Help
+For help with University computer systems and technology, visit http://www.mq.edu.au/about_us/offices_and_units/information_technology/help/. 
+
+When using the University's IT, you must adhere to the Acceptable Use of IT Resources Policy. The policy applies to all who connect to the MQ network including students.
+
+Changes from Previous Offering
+Removal of Seven Langauges material, swap from live lectures to recorded lectures, and assessment changes due to the 2025 assessment principals.
+
+Changes since First Published
+Date	Description
+17/07/2025	Updated exam date details.
+Unit information based on version 2025.04 of the Handbook
+
+© Macquarie University | CRICOS Provider 00002J | ABN 90 952 801 237 | TEQSA Provider PRV12032Disclaimer | Privacy | Accessibility | Contact us | Campus map

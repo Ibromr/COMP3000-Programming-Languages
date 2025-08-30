@@ -1,0 +1,125 @@
+COMP3000: 4 scanner → Application Exercise
+Thinking about water flows
+Over the remainder of semester, we will be creating a programming language to model and simulate water flows in rivers. This main task will scaold your application exercises and your assignment submissions.
+This week we will think about any special literals we might need. Recall that a literal is a
+way of writing a value in your language which communicates its type and its value. Numbers,
+strings, and True/False are literals you will be familiar with. When creating our own language for
+a particular domain, there may be domain concepts that need added to the language as literals.
+Below I will describe a small part of the water flow domain and in class you will:
+1. discuss which literal forms you might need
+2. design rules for that literal form
+3. describe a scanner for that literal form
+4. (if time allows) add scanning for that literal form to your lox interpreter.
+Water flows
+When it rains, water flows into the local creek/river. It hits the ground and, over time, goes down
+under gravity. It doesn’t happen instantaneously and water may still be flowing into a creek/river
+up to 10 days after a rainfall event.
+I will add a few simplifying assumptions to help:
+1. The rainfall across a whole catchment can be described with one number (in mm).
+2. The flow out of one creek is exactly the flow into the next creek.
+3. All water that gets into a creek/river will also flow out of it.
+4. All water that falls from the sky will (within 10 days) make its way into the creek/river.
+5. Each catchment has one creek/river which drains it.
+So you can see that the idea of a catchment is quite crucial, as is the way rain makes its way into
+that river. We will give more attention to those in later weeks.
+If we are going to model water flows, we will need a way to describe how much water flows
+out of the creek for each mm of rain that falls in that catchment. This is your job today. You
+should brainstorm existing literals you know from other languages that might work and think if
+you can/should customise them for this domain.
+You should then work out how that form of literal would be scanned and what type of token
+you need to define so it can be emitted from the token stream.
+Finally, you should implement that change to your scanner - the one you are building by following the book. See the next section for a subtask that will help.
+Teamwork tips
+With a larger task and a team, you can split up the work. Note, this is not like team work you
+might have done before where different jobs are allocated to different people then the results
+all collated, it is more like different team members take on different expertise and continuously
+share what they are learning with the team. Here is an example breakdown for this task:
+• Someone takes responsibility for understanding and running the existing scanner. What
+does it output for different inputs?
+• Someone takes responsibility for thinking through what water modelling in a programming
+language might even mean.
+• Someone takes responsibility for experimenting with literals on paper.
+• Someone takes responsibility for understanding where in the code the changes will need
+to go.
+• etc.
+These tasks are not independent, so you all need to be in constant communication, but it allows
+each person to have a focus and for the team to achieve a big task within an hour timeframe.
+Answer
+Note
+This "answer" is only a suggestion, there are many possible correct approaches.
+If the water flows over 10 days, I need 10 numbers between 0 and 1 representing the percentage
+that gets into the creek that day. Lot of languages have literal forms that can do that:
+arrays {0.2, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.0}
+lists [0.2, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.0]
+dictionaries [1: 0.2, 2: 0.1, 3: 0.1, 4: 0.1, 5: 0.1, 6: 0.1, 7: 0.1, 8: 0.1, 9: 0.1, 10: 0.0]
+Any of these would work. Because lox already uses curly braces but does not use square brackets,
+I think list syntax works best for me (dictionaries are just longer than they need to be). Even then,
+this literal form is quite long, I wish I could have something shorter. I’m used to nice short literals!
+Even better
+This part explains a picture from the exerise: 
+This image presents a collection of standard statistical probability distributions, with their typical shapes shown as line plots. The distributions include:
+
+Normal
+
+Uniform
+
+t
+
+Exponential
+
+Gamma
+
+Log-normal
+
+Chi-square
+
+Beta
+
+F
+
+Weibull
+
+Poisson
+
+Each distribution is visualized to help identify its characteristic shape.
+
+Below the visual chart:
+
+The accompanying text explains a decision-making process where the author is selecting one of these distributions to model a set of 10 numbers. The key points are:
+
+The author expects the 10 numbers to follow a standard distribution.
+
+They choose the log-normal distribution because it "looks right."
+
+A log-normal distribution is defined by two parameters: the mean (μ) and standard deviation (σ).
+
+The author wants a literal form to hold these two parameters, and since existing notations in other languages don’t suffice, they decide to create a custom notation:
+
+lognorm[μ, σ]
+
+Summary:
+
+The image is a visual and narrative discussion about statistical distribution choices for modeling data, leading to the author's selection of a log-normal distribution and the creation of a custom notation to represent it.
+for example lognorm[3,2] would be a distribution where most of the rain drains on the third day.
+Note, I’ve used square brackets because I want to make it as simple as possible for my scanner
+to know that it is not a function call (which we will learn to scan later).
+Then I changed my mind and went with a symbol between two numbers. A squiggle kind of
+looks like a distribution plot
+2 ~ 3
+is the log normal distribution with a mean of 2 and standard deviation of 3.
+I really like this form, so I am going with it.
+Scanner changes
+I need to make my scanner accept this literal. Recall that scanners only deal with tokens. What
+new token(s) have I introduced? Just one! The ~ is my only new token. Here are the changes that
+are needed:
+• Add a new TokenType for DISTRO. I could use SQUIGGLE or TILDA just as well, it is up to me.
+• Adjust Scanner method scanToken to add a new case case '~': addToken(DISTRO); break;
+Note
+There is a general software engineering principal that pops up here. I put meaning into my
+token by calling it DISTRO rather than TILDA. Was this the right choice? Overall, it is a 50/50
+decision I would say but since I am adding to an existing codebase I should match what
+happens there. If we look at the existing token types, the non-meaning option is being
+used. For example SLASH not DIVIDE and STAR not MULTIPLY so I think, on balance, TILDA
+is better in this case. Choosing DISTRO won’t break anything at all, it just creates a tiny
+inconsistency in the codebase. These are harmless on their own but tend to accumulate
+and grow and so programmers spend quite a lot of time thinking about these things.

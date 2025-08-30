@@ -1,0 +1,100 @@
+COMP3000 Programming Languages
+COMP3000: 4 scanner ! Application Exercise
+Thinking about water flows
+Over the remainder of semester, we will be creating a programming language to model and simulate water flows in rivers. This main task will sca!old your application exercises and your assignment submissions.
+Modelling rivers involves taking rainfall data and simulating what water levels will result from
+that rainfall over a period of time. This type of modelling is vital to environmental management
+and public safety. Floods can be predicted and mitigation methods can be designed. It also
+allows water managers to experiment with di!erent dam strategies to maximise safety.
+River system modelling is normally done with simulation software but it could be done better
+if it was done with a custom programming language instead. COMP3000 2025 students will use
+what they are learning to create just such a language.
+Note
+Over semester your team will make the best river modelling language you can. You are
+not being pushed towards a certain solution, you are exploring possibilities. The textbook
+will help you implement the language you come up with, but your general knowledge and
+imagination will guide the language. If you need to ask "domain questions" of an expert
+in the domain, ask your class teacher or post in the forums. We’ve chosen this problem
+because you all know how water and rivers work in at least some way.
+Solving this problem is a real contribution to the science of waterflow management. Your team
+is taking on a real-world problem, you will need to bring your A-game.
+Co-Design
+As students work through their workshops, unit sta! will adjust future work to account for the
+directions students are taking and their choices. In this way the course is co=designed with each
+cohort of students.
+A guide
+I have done this task already to prove (to myself) it is a good idea. I will give you a little tour
+of my solution to help guide you on your way. My solution is a programming language based on
+Lox (I called it "mattlock"). I added a few new features (beyond what is covered in the text book)
+to support modelling water flows. When I execute a program in this language it computes all the
+waterflows in every river for me. You will be familiar with programs that only output the things
+you told it to print, but why be so constrained? In my case I made the output of the program the
+final state of all the variables in the program, all wrapped up in a table and that ended up being
+just what I needed! I created di!erent programs written in that language to model di!erent river
+systems. I have so far done the Canberra river system (which is in Figure 1), the full ACT river
+system, the Lane Cove River system to Chatswood, and the Berowra River system all the way to
+Marramarra creek (that is a long program but really shows o! how much you can say when you
+have the right notation to do it in). Thus my repository of mattlock programs is:
+1
+COMP3000 Programming Languages
+Figure 1: An example watershed. On the left is a stylised map and on the right is all the draining
+rivers and dams on a map to help situate the watershed.
+2
+COMP3000 Programming Languages
+• canberra.mattlock (40 lines of mattlock code)
+• act.mattlock (50 lines of mattlock code)
+• lane_cove.mattlock (180 lines of mattlock code)
+• berowra.mattlock (473 lines of mattlock code)
+And here is an example run of one of my water modelling programs. The river system it is
+simulating is shown in Figure 1.
+> java mattlock.Lox canberra.mattlock
+This system assumes that the rainfall all over the river system is the same and can
+be described with one number per day.
+Rainfall (mm) per day:
+----------------------
+0 1 2 3 4 5 6 7 8 9 10 11
+rainfall 11.4 0.0 0.4 0.0 0.0 2.0 0.2 0.2 0.2 0.0 0.0 8.3
+Running the model computes the flow in each watershed on each day.
+Flows (L/second)
+----------------
+0 1 2 3 4 5 6 7 8 9 10 11
+upper_molo 57.00 0.0 2.00 0.0 0.0 10.0 1.00 1.00 1.00 0.0 0.0 41.50
+googong 114.00 0.0 4.00 0.0 0.0 20.0 2.00 2.00 2.00 0.0 0.0 83.00
+quean 31.40 20.0 0.40 0.0 0.0 22.0 20.20 0.20 0.20 0.0 0.0 28.30
+jerra 22.80 0.0 0.80 0.0 0.0 4.0 0.40 0.40 0.40 0.0 0.0 16.60
+central_molo 145.40 20.0 4.40 0.0 0.0 42.0 22.20 2.20 2.20 0.0 0.0 111.30
+lower_molo 9.12 0.0 0.32 0.0 0.0 1.6 0.16 0.16 0.16 0.0 0.0 6.64
+I can’t show you my programming language - I want each team to be creative and come up with
+new exciting ideas - but I can give a little hint. In the Canberra river system, central molongolo is
+made up of all the water coming from upper molongolo, all the water from queanbeyan, all the
+water from jerrabomberra, and the water that fell over that area. I represent this in my program
+as
+central_molo = upper_molo + quean + jerra + central_molo_rainfall
+but I have put some magic into that central_molo_rainfall variable. It is not just a number, it
+somehow captures the way rain makes its way into a creek in the days after the rainfall event. It
+is a simple solution with powerful e!ects1
+.
+Your team’s task
+This week I want you to:
+• Brainstorm how this whole process even works.
+• Brainstorm what sort of forms that central_molo_rainfall could take.
+The second task might require you to think about any special literals we might need. Recall
+that a literal is a way of writing a value in your language which communicates its type and its
+value. Numbers, strings, and True/False are literals you will be familiar with. When creating
+our own language for a particular domain, there may be domain concepts that need added to
+the language as literals. Note that this week’s class will involve lots of brainstorming, headscratching, exploration, and inspiration. You might choose to make additions to your scanner
+based on what you decide, but that is a secondary concern.
+1This is super-power of programming based solutions to this problem
+3
+COMP3000 Programming Languages
+Water flows
+When it rains, water flows into the local creek/river. It hits the ground and, over time, goes down
+under gravity. It doesn’t happen instantaneously and water may still be flowing into a creek/river
+up to 10 days after a rainfall event.
+I will add a few simplifying assumptions to help:
+1. The rainfall across a whole catchment can be described with one number (in mm).
+2. The flow out of one creek is exactly the flow into the next creek.
+3. All water that gets into a creek/river will also flow out of it.
+4. All water that falls from the sky will (within 10 days) make its way into the creek/river.
+5. Each catchment has one creek/river which drains it.
+4

@@ -1,0 +1,84 @@
+COMP3000 Programming Languages
+COMP3000: 5 representing → Application
+Exercise
+Combining rivers into other rivers
+This week we are seeing how arithmetic expressions can be seen as trees and how evaluating
+them is tree traversal. We have also seen how that ties into writing a parser for arithmetic
+expressions.
+Note
+Your team probably began thinking about this last week when you were thinking about
+how to combine rivers. Strictly speaking, we were focussing on how to represent a single
+river/watershed/catchement last week but that was hard to think about without thinking
+about combining rivers so I am sure many of you were on that track. This is the week
+where we really get into the idea of combining them.
+You have probably noticed that larger river systems get complex fast, so I have created a few
+smaller river systems we can use as example. Figure 2 shows the Scout’s creek area. Figure ??
+gives the Terry’s creek area. Figure 1 gives the Canberra area.
+In your application exercise this week your team will explore how the branching nature of
+watersheds leads to similar solutions when programming models of water flows. If you have
+not read last week’s application exercise, please do so. The terminology from that exercise if
+assumed knowledge this week. Last week’s example water system is in figure 1 and two simpler
+ones have been added in Figures 2 and 3.
+Example river flow literals
+Before you can start this week’s task, you need to have some answer for last week’s task. I’ve
+collected some of the literal forms that sta and students discussed that week for you to use as
+inspiration if you either struggled last week, or just if you like these better:
+2.0 or 2.0x or 2.0L/s This describes a watershed where every 1mm of rain creates a flow 2L/s in
+the river. The number 2.0 or the multiplier 2.0x or unit 2.0L/s is used to show this. This is
+a simple system with not much modelling power, but it works and it is a starting point.
+[1,3,3,2,1,0,0,0,0,0] This describes a watershed where 10L/s eventually gets into the river
+but on day 1 only 1L/s is in the river. On day 2 3L/s gets into the river, and so on. Standard
+list syntax has been used.
+R5 This represents a watershed that eventually puts 5ML into the river for each mm of rainfall
+but does so with exponential decay.
+ED5 This represents a watershed that puts 5L/s into the river on day 1 and that exponential decay
+is used to compute the amount on days 2-10.
+(2.5 ~1)@10 This represents the same array as above, but described with a shorter syntax. The
+2.5 indicates which day has the most river flow and the 1 represents the size of the tail (in
+this case quite short). The 10 indicates that the values all add to 10.
+1
+COMP3000 Programming Languages
+Figure 1: An example watershed. On the left is a stylised map and on the right is all the draining
+rivers and dams on a map to help situate the watershed.
+2
+COMP3000 Programming Languages
+Figure 2: The Scout’s Creek system
+Figure 3: The Devlin’s Creek system
+I would like you to see that there are multiple "correct" ways to approach this and that there are
+multiple syntaxes you could choose so your team will almost certainly have something unique!
+This week’s task
+Your task this week is to work out how something like a plus symbol allows you to describe the
+way rivers combine into other rivers.
+Keep in mind that you are working towards an assignment submission based on this work and
+the more your team gets done in class, the easier your job is! This week we would like you to
+create (and to show at the end of class)
+• Expressions in your chosen notation/language which describe some example river systems.
+• Be able to talk through the execution of those trees in theory
+• A parser in Nystrom’s CFG notation that extends Lox’s parser to cover your language1
+Tips
+You may well have everything you need within Lox’s expression language. If so, your task is to
+re-interpret what those symbols mean in this context. If not, your task is to come up with new
+symbols and to describe (in words, not code) what it means to execute those symbols.
+Recall a few simplifying assumptions you can use to keep things workable (carried over from
+last week with three additions):
+1
+if needed, or explain why the existing one from chapter 5 will work just fine
+3
+COMP3000 Programming Languages
+• The rainfall across a whole catchment can be described with one number (in mm).
+• The flow out of one creek is exactly the flow into the next creek.
+• All water that gets into a creek/river will also flow out of it.
+• All water that falls from the sky will (within 10 days) make its way into the creek/river.
+• Each catchment has one creek/river which drains it.
+• When rivers combine, their flow is combined by adding.
+• A river’s flow out is the sum of the flows in plus the water that falls in that watershed.
+• There is no delay for water to flow through a river. This one isn’t realistic, but it helps
+simplify my system a lot.2
+2
+I use + for combining rivers. If there was a delay, I would need to do something dierent for  + b than I do for
+b + , which doens’t really match with how I think of +
+4
+COMP3000 Programming Languages
+Answer
+Still to do.
+5
