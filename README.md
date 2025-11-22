@@ -7,6 +7,8 @@ This semester, our cohort is creating a custom-built programming language to mod
 ## The Unit's Approach
 COMP3000 integrates computer science and software engineering principles through the EPIC (Experience, Purpose, Impact, Collaboration) learning framework. We work in teams throughout the semester, applying core concepts to collaboratively solve this significant, real-world problem.
 
+## Please see my project in `Tazyik` folder
+
 
 
 
