@@ -1,0 +1,2 @@
+rm tazyik/*.class
+rm tazyik/tool/*.class

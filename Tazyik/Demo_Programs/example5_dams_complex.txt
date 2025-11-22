@@ -1,0 +1,11 @@
+FlowOut flowOut = 4;
+
+River nehir1 = [100,100,50,50,30,20]mm;
+River nehir2 = 0mm;
+Dam controlDam = 150ML release 20%;
+
+Flow mainSystem = nehir1 -> nehir2;
+Flow Cikis = nehir2 -> controlDam;
+
+Capacity nehir1 = 200ML;
+Capacity nehir2 = 200ML;

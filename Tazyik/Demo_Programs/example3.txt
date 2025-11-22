@@ -1,0 +1,19 @@
+FlowOut flowOut = 7;
+
+River mountain = 20(3)mm;
+River valley = [14,12,8,5,3]mm;
+River plain = 0(2)mm;
+plain = 10(1)mm;
+River plain1 = 5(2)mm;
+River plain2 = 3(4)mm;
+River outlet = 0mm;
+
+Flow upperSystem = mountain -> valley;
+Flow lowerSystem = (valley + plain) -> (plain1 + plain2) -> outlet;
+
+Capacity mountain = 100ML;
+Capacity valley = 200ML;
+Capacity plain = 150ML;
+Capacity plain1 = 75ML;
+Capacity plain2 = 60ML;
+Capacity outlet = 500ML;

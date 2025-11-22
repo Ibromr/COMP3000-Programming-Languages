@@ -1,0 +1,20 @@
+FlowOut flowOut = 10;
+
+River mountain = [20,25,30,15,10,5,3,2,1]mm;
+River valley = [10,15,20,12,8,4,2,1,0]mm;
+River plain = 5mm;
+River outlet = 0mm;
+
+Dam controlDam = 150ML release 50%;
+Dam mainDam = 300ML release 60%;
+
+Flow mountainFlow = mountain -> valley;
+Flow valleyToDam = valley -> controlDam;
+Flow damFlow = controlDam -> (plain + mainDam);
+Flow finalFlow = mainDam -> outlet;
+
+Capacity mountain = 75ML;
+Capacity valley   = 75ML;  
+Capacity plain    = 75ML;
+Capacity outlet   = 75ML;
+

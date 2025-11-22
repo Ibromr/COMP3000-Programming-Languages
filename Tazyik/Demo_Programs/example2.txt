@@ -1,0 +1,25 @@
+FlowOut flowOut = 5;
+
+River googong = 15mm;
+River jerrabomberra = 12mm;
+River upperMolonglo = 18mm;
+River queanbeyan = 0mm;
+River centralMolonglo = 0mm;
+River lowerMolonglo = 0mm;
+
+Dam dam1 = 400ML;
+Dam dam2 = 400ML release 100%;
+
+Flow googongFlow = googong -> dam1;
+Flow dam1Flow = dam1 -> queanbeyan;
+Flow combineFlow = (queanbeyan + upperMolonglo + jerrabomberra) -> centralMolonglo;
+Flow centralFlow = centralMolonglo -> dam2;
+Flow outputFlow = dam2 -> lowerMolonglo;
+
+Capacity googong = 200ML;
+Capacity jerrabomberra = 200ML;
+Capacity upperMolonglo = 200ML;
+Capacity queanbeyan    = 200ML;
+Capacity centralMolonglo = 300ML;
+Capacity lowerMolonglo = 200ML;
+

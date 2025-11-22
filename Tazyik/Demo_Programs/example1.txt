@@ -1,0 +1,9 @@
+River upstream = 10mm;
+River midStream = 8mm;
+River downstream = 5mm;
+
+Flow mainSystem = (upstream + midStream) -> downstream;
+
+Capacity upstream = 50ML;
+Capacity midStream = 30ML;
+Capacity downstream = 100ML;

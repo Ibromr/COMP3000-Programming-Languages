@@ -1,0 +1,3 @@
+javac tazyik/tool/*.java
+java -cp tazyik/tool GenerateAst tazyik/
+javac tazyik/*.java
