@@ -2,7 +2,7 @@
 
 ## Overview
 
-Tazyik is a declarative domain-specific language for modelling water flows in river systems with support for dams, multi-day rainfall patterns, and capacity management.
+Tazyik (one meaning is "pressure" in Persian and Turkish) is a declarative domain-specific language for modelling water flows in river systems with support for dams, multi-day rainfall patterns, and capacity management.
 
 ---
 
